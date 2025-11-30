@@ -1,7 +1,18 @@
+# Web Framework
 fastapi==0.109.0
 uvicorn[standard]==0.27.0
+
+# Data Validation
 pydantic==2.5.3
 pydantic-settings==2.1.0
+
+# Kafka Client (Async)
 aiokafka==0.10.0
+
+# ClickHouse Client
 clickhouse-connect==0.7.0
+
+# Utilities
 python-json-logger==2.0.7
+python-dotenv==1.0.0
+requests==2.31.0
