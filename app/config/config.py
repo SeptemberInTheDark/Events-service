@@ -9,6 +9,7 @@ class Settings(BaseSettings):
 
     #Kafka
     KAFKA_BOOTSTRAP_SERVERS: str = "localhost:9092"
+    KAFKA_TOPIC: str = "events_topic"
 
 
     class Config:
