@@ -10,6 +10,10 @@ class Settings(BaseSettings):
     #Kafka
     KAFKA_BOOTSTRAP_SERVERS: str = "localhost:9092"
     KAFKA_TOPIC: str = "events_topic"
+    CLICKHOUSE_HOST: str = "localhost"
+    CLICKHOUSE_PORT: int = 8123
+    CLICKHOUSE_DATABASE: str = "events_db"
+    GROUP_ID: str = "events_consumer_group"
 
 
     class Config:
