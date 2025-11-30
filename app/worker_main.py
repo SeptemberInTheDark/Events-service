@@ -14,7 +14,7 @@ async def consume():
         clickhouse_service.connect()
     except Exception as e:
         logger.error(f"Failed to connect to ClickHouse: {e}")
-        return # Выходим, если базы нет, Docker перезапустит контейнер
+        return
 
     await handler.start()
 
@@ -39,7 +39,6 @@ async def consume():
             for tp, messages in result.items():
                 if messages:
                     logger.info(f"Received {len(messages)} messages")
-                    # Исправил опечатку procces -> process
                     await handler.process_batch(messages)
                     await consumer.commit()
 
